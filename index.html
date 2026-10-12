@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chowdeswari Enterprises supplies M-Sand, P-Sand, aggregates, 4-inch and 6-inch cement blocks, and cement across Bengaluru.">
+  <title>Chowdeswari Enterprises Building Materials in Bangalore</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --page: light-dark(#f5f7f8, #101619);
+      --surface: light-dark(#ffffff, #192126);
+      --surface-soft: light-dark(#eef3f3, #202b31);
+      --text: light-dark(#18242a, #f1f5f5);
+      --muted: light-dark(#5d6c72, #a9b8be);
+      --border: light-dark(#dbe3e5, #334148);
+      --brand: light-dark(#0f766e, #5eead4);
+      --brand-dark: light-dark(#115e59, #134e4a);
+      --accent: light-dark(#f4b942, #f4b942);
+      --ink-on-brand: #ffffff;
+      --shadow: 0 18px 55px rgba(12, 32, 36, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.55; }
+    a { color: inherit; }
+    .site-root { min-height: 100vh; width: 100%; background: var(--page); }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar { border-bottom: 1px solid var(--border); background: var(--surface); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+    .logo { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 44px; border-radius: 12px; background: var(--brand); color: var(--ink-on-brand); font-size: 15px; font-weight: 900; letter-spacing: -.7px; }
+    .brand-name { font-weight: 850; line-height: 1.15; letter-spacing: -.3px; }
+    .brand-sub { color: #000000; font-weight: bold; font-size: 14px; margin-top: 4px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; font-size: 14px; font-weight: 650; }
+    .nav-links a { text-decoration: none; color: var(--muted); }
+    .nav-links a:hover { color: var(--brand); }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 46px; padding: 12px 18px; border-radius: 10px; border: 1px solid transparent; font-weight: 750; font-size: 14px; text-decoration: none; cursor: pointer; transition: transform .15s ease, opacity .15s ease; }
+    .button:hover { transform: translateY(-1px); }
+    .button-primary { background: var(--brand); color: var(--ink-on-brand); }
+    .button-outline { border-color: var(--border); background: var(--surface); color: var(--text); }
+    .hero { padding: 70px 0 54px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 48px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--brand); padding: 7px 12px; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: .7px; text-transform: uppercase; }
+    .eyebrow-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
+    h1 { font-size: clamp(38px, 5vw, 62px); line-height: 1.04; letter-spacing: -2.8px; margin: 22px 0 20px; max-width: 680px; }
+    h1 span { color: var(--brand); }
+    .hero-copy { font-size: 18px; color: var(--muted); max-width: 590px; margin: 0 0 26px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .microcopy { font-size: 12px; color: var(--muted); margin-top: 15px; }
+    .hero-visual { min-height: 370px; position: relative; border-radius: 28px; overflow: hidden; background: linear-gradient(145deg, #dbe8e4, #aabdb7 55%, #738f86); box-shadow: var(--shadow); display: flex; align-items: end; padding: 24px; }
+    .hero-visual::before { content: ""; position: absolute; width: 250px; height: 250px; border-radius: 50%; background: rgba(255,255,255,.30); top: -65px; right: -55px; }
+    .hero-visual::after { content: ""; position: absolute; width: 190px; height: 190px; border-radius: 50%; background: rgba(15,118,110,.20); top: 30px; left: -50px; }
+    .pile { position: absolute; bottom: 0; left: 0; right: 0; height: 64%; background: linear-gradient(150deg, transparent 0 22%, rgba(70,84,78,.45) 22% 100%); clip-path: polygon(0 48%, 13% 25%, 26% 41%, 43% 9%, 61% 36%, 75% 16%, 100% 42%, 100% 100%, 0 100%); }
+    .material-lines { position: absolute; inset: 0; opacity: .23; background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 15px 15px; }
+    .visual-card { z-index: 2; position: relative; width: 100%; padding: 19px; border: 1px solid rgba(255,255,255,.5); border-radius: 18px; background: rgba(255,255,255,.88); color: #18242a; backdrop-filter: blur(8px); }
+    .visual-card small { color: #596a6e; font-size: 12px; font-weight: 750; letter-spacing: .6px; text-transform: uppercase; }
+    .price-row { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-top: 5px; }
+    .price { font-size: 35px; line-height: 1.1; font-weight: 900; letter-spacing: -1.2px; }
+    .price-unit { color: #596a6e; font-size: 13px; font-weight: 650; }
+    .section { padding: 60px 0; }
+    .section-head { max-width: 660px; margin-bottom: 28px; }
+    .kicker { color: var(--brand); font-size: 12px; font-weight: 850; letter-spacing: 1.2px; text-transform: uppercase; }
+    h2 { font-size: clamp(28px, 3vw, 39px); line-height: 1.13; letter-spacing: -1.3px; margin: 10px 0 12px; }
+    .section-head p { color: var(--muted); margin: 0; font-size: 16px; }
+    .products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .product { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 6px 22px rgba(15,40,42,.03); }
+    .product-photo { width: 100%; height: 185px; object-fit: cover; display: block; background: var(--surface-soft); }
+    .product-body { padding: 21px; }
+        .product-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: var(--surface-soft); font-size: 24px; margin-bottom: 19px; }
+    .product h3 { margin: 0 0 7px; font-size: 20px; letter-spacing: -.4px; }
+    .product p { color: var(--muted); font-size: 14px; margin: 0 0 18px; min-height: 44px; }
+    .product-price { border-top: 1px solid var(--border); padding-top: 15px; font-weight: 800; }
+    .product-price span { display: block; color: var(--muted); font-size: 12px; font-weight: 550; }
+    .band { background: var(--surface-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+    .benefit { display: flex; align-items: start; gap: 13px; }
+    .check { width: 31px; height: 31px; flex: 0 0 31px; border-radius: 50%; background: var(--brand); color: white; display: grid; place-items: center; font-weight: 900; }
+    .benefit h3 { margin: 1px 0 5px; font-size: 16px; }
+    .benefit p { color: var(--muted); margin: 0; font-size: 14px; }
+    .areas-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 30px; align-items: center; }
+    .area-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 23px; }
+    .pill { border: 1px solid var(--border); background: var(--surface); border-radius: 999px; padding: 9px 13px; font-size: 13px; font-weight: 700; }
+    .delivery-card { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 28px; }
+    .delivery-card .big-icon { font-size: 34px; }
+    .delivery-card h3 { font-size: 22px; margin: 10px 0 8px; }
+    .delivery-card p { color: var(--muted); font-size: 14px; margin: 0; }
+    .cta { padding: 64px 0; }
+    .cta-panel { border-radius: 26px; padding: 42px; background: var(--brand-dark); color: white; display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+    .cta-panel h2 { margin-top: 0; max-width: 620px; }
+    .cta-panel p { margin: 0; color: rgba(255,255,255,.78); }
+    .cta-panel .button { background: var(--accent); color: #18242a; white-space: nowrap; }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 34px; }
+    .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 24px; }
+    .contact-line { display: flex; gap: 13px; align-items: start; margin: 17px 0; }
+    .contact-line strong { display: block; font-size: 14px; }
+    .contact-line span { color: var(--muted); font-size: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+    label { display: block; font-size: 13px; font-weight: 750; margin-bottom: 6px; }
+    input, select, textarea { width: 100%; padding: 12px 13px; border-radius: 10px; border: 1px solid var(--border); background: var(--page); color: var(--text); font: inherit; font-size: 14px; outline-offset: 2px; }
+    textarea { min-height: 105px; resize: vertical; }
+    .field { margin-bottom: 14px; }
+    .form-note { color: var(--muted); font-size: 12px; margin: 10px 0 0; }
+    footer { padding: 24px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .footer-row strong { color: var(--text); }
+    @media (max-width: 800px) {
+      .container { width: min(100% - 30px, 620px); }
+      .nav { min-height: 68px; }
+      .nav-links { display: none; }
+      .nav > .button { padding: 10px 12px; min-height: 40px; }
+      .hero { padding: 44px 0 35px; }
+      .hero-grid, .areas-grid, .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-visual { min-height: 290px; }
+      .products { grid-template-columns: 1fr; }
+      .product p { min-height: 0; }
+      .benefits { grid-template-columns: 1fr; gap: 22px; }
+      .section { padding: 45px 0; }
+      .cta-panel { padding: 28px; flex-direction: column; align-items: start; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .footer-row { align-items: start; flex-direction: column; gap: 7px; }
+      h1 { letter-spacing: -1.8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-root">
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="#home" aria-label="Chowdeswari Enterprises home">
+          <span class="logo">CE</span>
+          <span><span class="brand-name">Chowdeswari Enterprises </span><span class="brand-sub"> Bangalore</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#products">Materials</a><a href="#areas">Delivery areas</a><a href="#contact">Contact</a>
+        </nav>
+        <a class="button button-primary" href="#contact">Get a quote <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> Construction material supply</div>
+            <h1>Reliable materials for your <span>next build.</span></h1>
+            <p class="hero-copy">M-Sand, P-Sand, aggregates, 4-inch and 6-inch cement blocks, and cement for house construction and building projects across Bangalore.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">Request a quotation <span aria-hidden="true">→</span></a>
+              <a class="button button-outline" href="#products">Explore materials</a>
+            </div>
+            <p class="microcopy">Tell us your site location and quantity to receive a delivery quote.</p>
+          </div>
+          <div class="hero-visual" aria-label="Construction aggregate illustration">
+            <div class="material-lines"></div><div class="pile"></div>
+            <div class="visual-card">
+              <small>Building materials for Bangalore</small>
+              <div class="price-row"><div class="price" style="font-size:27px">Sand · Blocks · Cement</div></div>
+              <div style="margin-top:8px;color:#596a6e;font-size:12px">Cement and aggregates also available. Ask us for current rates.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="container">
+          <div class="section-head"><div class="kicker">Our materials</div><h2>What does your site need?</h2><p>Share your material type, quantity and delivery location. We’ll help you check the applicable rate and delivery details.</p></div>
+          <div class="products">
+<article class="product">
+  <img class="product-photo" src="M Sand.jpg" alt="Manufactured sand (M-Sand) for concrete and construction work" loading="lazy">
+  <div class="product-body">
+    <h3>M-Sand</h3>
+    <p>Manufactured sand for concrete and general construction work.</p>
+    <div class="product-price">Rate on request<span>Ask for a quote based on quantity and site location.</span></div>
+  </div>
+</article>
+            <article class="product">
+  <img class="product-photo" src="P Sand.webp" alt="Fine plastering sand (P-Sand) for smooth wall finishes" loading="lazy">
+  <div class="product-body">
+    <h3>P-Sand</h3>
+    <p>Fine plastering sand for smooth wall and ceiling finishes.</p>
+    <div class="product-price">Rate on request<span>Ask for a quote based on quantity and site location.</span></div>
+  </div>
+</article>
+<article class="product">
+  <img class="product-photo" src="Aggregates.jpg" alt="Stone aggregates and jelly in various sizes for concrete works" loading="lazy">
+  <div class="product-body">
+    <h3>Aggregates / Jelly</h3>
+    <p>Stone aggregates in suitable sizes for concrete and other site works.</p>
+    <div class="product-price">Rate on request<span>Specify size, quantity and delivery address.</span></div>
+  </div>
+</article>
+ <article class="product"><img class="product-photo" src="Blocks.jfif" alt="Cement concrete blocks supplied by Chowdeswari Enterprises" loading="lazy"><div class="product-body"><h3>4-Inch Cement Blocks</h3><p>Concrete blocks for suitable partition and walling applications.</p><div class="product-price">Rate on request<span>Confirm block type, dimensions and quantity.</span></div></div></article>
+            <article class="product"><img class="product-photo" src="Blocks.jfif" alt="Cement concrete blocks supplied by Chowdeswari Enterprises" loading="lazy"><div class="product-body"><h3>6-Inch Cement Blocks</h3><p>Concrete blocks for suitable walling applications, subject to project specifications.</p><div class="product-price">Rate on request<span>Confirm block type, dimensions and quantity.</span></div></div></article>
+            <article class="product"><img class="product-photo" src="Cement.webp" alt="Cement bags supplied by Chowdeswari Enterprises" loading="lazy"><div class="product-body"><h3>Cement</h3><p>Cement supply for concrete, mortar, masonry and other building needs.</p><div class="product-price">Rate on request<span>Ask for available brands, grade and price per bag.</span></div></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band">
+        <div class="container">
+          <div class="section-head"><div class="kicker">Why choose Chowdeswari Enterprises?</div><h2>Simple ordering. Clear quotations.</h2><p>Tell us what you need, and we’ll confirm the details before you place an order.</p></div>
+          <div class="benefits">
+            <div class="benefit"><div class="check">✓</div><div><h3>Competitive quotations</h3><p>Rates based on the material, quantity and delivery site.</p></div></div>
+            <div class="benefit"><div class="check">✓</div><div><h3>Delivery coordination</h3><p>Discuss site access, delivery timing and availability in advance.</p></div></div>
+            <div class="benefit"><div class="check">✓</div><div><h3>Direct enquiry</h3><p>Contact us with your requirement instead of searching multiple suppliers.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="areas">
+        <div class="container areas-grid">
+          <div>
+            <div class="kicker">Service areas</div><h2>Supplying construction sites around Bengaluru.</h2>
+            <p style="color:var(--muted);margin:0">Our core focus is Whitefield and Hoskote, with enquiries welcome from nearby construction areas. Delivery availability and transport charges should be confirmed for each site.</p>
+            <div class="area-pills"><span class="pill">Whitefield</span><span class="pill">Hoskote</span><span class="pill">Varthur</span><span class="pill">KR Puram</span><span class="pill">Sarjapur Road</span><span class="pill">Electronic City</span><span class="pill">HSR Layout</span><span class="pill">Begur</span><span class="pill">Attibele</span><span class="pill">Nearby Bengaluru areas</span></div>
+          </div>
+          <div class="delivery-card"><div class="big-icon" aria-hidden="true">🚚</div><h3>Need a delivery quote?</h3><p>Send your construction site location, material type and approximate quantity. We can then discuss the available rate and delivery arrangement.</p><a class="button button-primary" style="margin-top:20px" href="#contact">Share site details →</a></div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container"><div class="cta-panel"><div><h2>Planning a pour, plastering job or new build?</h2><p>Request current rates for sand, aggregates, cement blocks and cement for your site.</p></div><a class="button" href="#contact">Get a quotation <span aria-hidden="true">↗</span></a></div></div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-head"><div class="kicker">Contact us</div><h2>Tell us what your site needs.</h2><p>Contact us by phone or WhatsApp, or complete the form below to send your quotation request directly.</p></div>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3 style="margin:0 0 8px;font-size:21px">Chowdeswari Enterprises</h3>
+              <p style="margin:0;color:var(--muted);font-size:14px">Construction materials for Bangalore sites</p>
+              <div class="contact-line"><span aria-hidden="true">📍</span><div><strong>Service base</strong><span>Bangalore, Karnataka</span></div></div>
+              <div class="contact-line"><span aria-hidden="true">🧱</span><div><strong>Materials</strong><span>M-Sand · P-Sand · Aggregates · 4-inch / 6-inch cement blocks · Cement</span></div></div>
+              <div class="contact-line"><span aria-hidden="true">📞</span><div><strong>Call us</strong><span><a href="tel:+919449392694">94493 92694</a> · <a href="tel:+918123836349">81238 36349</a> · <a href="tel:+917899589559">78995 89559</a></span></div></div>
+              <div class="contact-line">
+  <span aria-hidden="true">💬</span>
+  <div>
+    <strong>WhatsApp enquiries</strong>
+    <span>
+      <a href="https://wa.me/919449392694" target="_blank" rel="noopener">WhatsApp 94493 92694</a><br>
+      <a href="https://wa.me/918123836349" target="_blank" rel="noopener">WhatsApp 81238 36349</a><br>
+      <a href="https://wa.me" target="_blank" rel="noopener">WhatsApp 78995 89559</a>
+    </span>
+  </div>
+</div>
+
+<div class="contact-line" style="margin-top: 10px;">
+  <span aria-hidden="true">✉️</span>
+  <div>
+    <strong>Email support</strong>
+    <span>
+      <a href="mailto:goodday111997@gmail.com">goodday111997@gmail.com</a>
+    </span>
+  </div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
+  <a class="button button-primary" href="https://wa.me/919449392694" target="_blank" rel="noopener">WhatsApp us ↗</a>
+  <a class="button button-outline" href="tel:+919449392694">Call now</a>
+</div></div>
+            <form class="contact-card" id="enquiry-form">
+              <div class="form-row"><div class="field"><label for="customer-name">Your name</label><input id="customer-name" name="customer-name" placeholder="Name" required></div><div class="field"><label for="customer-phone">Your phone number</label><input id="customer-phone" name="customer-phone" type="tel" placeholder="Phone number" required></div></div>
+              <div class="form-row"><div class="field"><label for="material">Material required</label><select id="material" name="material"><option>M-Sand</option><option>P-Sand</option><option>Aggregates / Jelly</option><option>4-Inch Cement Blocks</option><option>6-Inch Cement Blocks</option><option>Cement</option><option>Multiple materials</option></select></div><div class="field"><label for="quantity">Approx. quantity</label><input id="quantity" name="quantity" placeholder="e.g. 10 tonnes"></div></div>
+              <div class="field"><label for="site-location">Construction site location</label><input id="site-location" name="site-location" placeholder="Area / landmark" required></div>
+              <div class="field"><label for="requirements">Additional details</label><textarea id="requirements" name="requirements" placeholder="Material size, required date, delivery instructions..."></textarea></div>
+              <button class="button button-primary" type="submit" style="width:100%">Prepare enquiry message →</button>
+              <p class="form-note" id="form-status" aria-live="polite">This draft form does not send data to a server. It prepares a message for you to copy or share.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer><div class="container footer-row"><div><strong>Chowdeswari Enterprises</strong> · Bangalore</div><div>M-Sand · P-Sand · Aggregates · Cement Blocks · Cement</div><div>© <span id="year"></span> Chowdeswari Enterprises</div></div></footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('enquiry-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const lines = [
+        'Hello Chowdeswari Enterprises,',
+        '',
+        'I would like a quotation for construction materials.',
+        'Name: ' + (form.get('customer-name') || ''),
+        'Phone: ' + (form.get('customer-phone') || ''),
+        'Material: ' + (form.get('material') || ''),
+        'Approx. quantity: ' + (form.get('quantity') || 'Not specified'),
+        'Site location: ' + (form.get('site-location') || ''),
+        'Additional details: ' + (form.get('requirements') || 'None'),
+        '',
+        'Please share the current rate and delivery details. Thank you.'
+      ];
+      const message = lines.join('\n');
+      const whatsappUrl = 'https://wa.me/919449392694?text=' + encodeURIComponent(message);
+      window.open(whatsappUrl, '_blank', 'noopener');
+      const status = document.getElementById('form-status');
+      status.textContent = 'Your enquiry message is ready in WhatsApp. Please review it and tap Send.';
+    });
+  </script>
+</body>
+</html>
